@@ -3,7 +3,7 @@ fun main(){
     contaGabriel.titular = "Gabriel Lima"
     contaGabriel.numeroConta = "0001"
     contaGabriel.documento = "1010"
-    contaGabriel.saldo = 1000.00
+    contaGabriel.saldo = 100.00
 
     val contaNeuza = ContaCorrente()
     contaNeuza.titular = "Neuza Silva"
@@ -11,11 +11,10 @@ fun main(){
     contaNeuza.documento = "1011"
     contaNeuza.saldo = 00.00
 
-    contaGabriel.depositar(contaGabriel, 15.0)
-    contaGabriel.sacar(800.0)
     println("Bem vindo ao Bytebank, ${contaGabriel.titular}")
-    contaGabriel.transferir(contaNeuza, 101.00)
+    contaGabriel.transferir(contaGabriel, contaNeuza, 101.00)
     print(contaNeuza.extrato)
-    contaGabriel.isContaPositiva()
+    contaGabriel.isContaPositiva(contaGabriel)
+
 }
 
